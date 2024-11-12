@@ -1,0 +1,20 @@
+-- Local >  Old code:
+
+
+-- if not game:IsLoaded() then
+    game.Loaded:Wait()
+end -- just a variable for this code, edit it your way
+
+local loaded = game:IsLoaded()
+
+if not loaded then
+    task.spawn(function()
+        task.wait(5)
+        if not game:IsLoaded() then
+            game.Players.LocalPlayer:Kick("Haha slow internet, script requires fast internet.")
+        end
+    end)
+    game.Loaded:Wait()
+end  -- Private local troll systen
+
+-- Add script here
